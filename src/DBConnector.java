@@ -3,10 +3,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnector {
-	private static String driverName = "com.mysql.jdbc.Driver";
-	private static String url = "jdbc:mysql://localhost/testdb?autoReconnect=true&useSSL=false";
+	private static String driverName = "com.mysql.cj.jdbc.Driver";
+	private static String url = "jdbc:mysql://localhost/testdb?autoReconnect=true&useSSL=false&enabledTLSProtocols=TLSv1.2";
 	private static String user = "root";
-	private static String password = "mysql";
+	private static String password = "";
 	public Connection getConnection() {
 		Connection con = null;
 		
